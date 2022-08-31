@@ -19,11 +19,12 @@
             <p>Order: <span class="absolute">......................................................</span> <span class="pl-4">{{ current_hamberger }}</span></p>
             <p>Phone: <span class="absolute">......................................................</span> <span class="pl-4">{{ phone }}</span></p>
             <p>Address: <span class="absolute">......................................................</span> <span class="pl-4">{{ address }}</span></p>
+            <p>Price: <span class="absolute">......................................................</span> <span class="pl-8">{{ current_price }}</span></p>
         </div>
     </div>
     <div class="col-span-1">
         <div class="max-h-[520px] overflow-hidden">
-            <img class="w-full border border-white" :src="product_image" alt="no image" />
+            <img class="w-full border border-white rounded" :src="product_image" alt="no image" />
         </div>
     </div>
 </div>
@@ -38,24 +39,31 @@ export default {
         return {
             hambergers: [{
                 type: "Cheese",
-                link: 'https://www.tastingtable.com/img/gallery/heres-how-hamburgers-got-their-name/l-intro-1653066580.jpg'
+                link: 'https://www.tastingtable.com/img/gallery/heres-how-hamburgers-got-their-name/l-intro-1653066580.jpg',
+                price: '265$'
             }, {
                 type: "Salad",
-                link: 'https://img.tastykitchen.vn/resize/764x-/2021/05/31/thuong-thuc-mon-salad-ca-chua-voi-cong-thuc-che-bi-171d.jpg'
+                link: 'https://monngonmoingay.com/wp-content/uploads/2015/08/190.jpg',
+                price: '55$'
             }, {
                 type: "Meat",
-                link: 'https://media.istockphoto.com/photos/grilled-beef-steaks-picture-id540233806?k=20&m=540233806&s=612x612&w=0&h=tpjxD9SrkJimG8FzRlFXA0Crlp3z9N9W0QweDmetjOQ='
+                link: 'https://cdn.tgdd.vn/2020/11/CookProduct/1-1200x676-22.jpg',
+                price: '465$'
             }, {
                 type: "Omelet",
-                link: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2017%2F01%2Fmain%2Fhalf-moon-browned-omelet.jpg%3Fitok%3DmGBP10Co'
+                link: 'https://assets3.thrillist.com/v1/image/1492264/1200x600/scale',
+                price: '65$'
             }, {
                 type: "Fish",
-                link: 'http://cdn.tgdd.vn/Files/2021/09/09/1381495/huong-dan-cach-lam-fish-chips-ngon-chuan-vi-nguoi-anh-202109092118101320.jpg'
+                link: 'https://cdn.tgdd.vn/2021/12/CookDish/sushi-de-duoc-bao-lau-cach-bao-quan-sushi-qua-dem-va-nhan-avt-1200x676.jpg',
+                price: '185$'
             }, {
                 type: "Shrimp",
-                link: 'https://images.themodernproper.com/billowy-turkey/production/posts/Shrimp-Fajitas-8.jpg?w=960&h=720&q=82&fm=jpg&fit=crop&dm=1612803180&s=20bfaa2626f1af2e46c4887826d3abd6'
+                link: 'https://cdn.tgdd.vn/2021/07/CookProduct/tempura-la-gi-cach-lam-tempura-nhat-bot-tempura-la-gi-mua-o-dau-0-1200x676.jpg',
+                price: '205$'
             }, ],
             current_hamberger: 'Cheese',
+            current_price: '265$',
             product_image: 'https://www.tastingtable.com/img/gallery/heres-how-hamburgers-got-their-name/l-intro-1653066580.jpg',
             phone: '',
             address: ''
@@ -78,6 +86,7 @@ export default {
             let data = e.target
             this.product_image = this.hambergers[data.value].link
             this.current_hamberger = this.hambergers[data.value].type
+            this.current_price = this.hambergers[data.value].price
         },
         changePhone: function (e) {
             this.phone = e.target.value

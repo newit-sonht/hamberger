@@ -6,12 +6,10 @@
 
 <script>
 import Form from '@/components/Page/Hamberger/Form'
-import ChosenItem from '@/components/Page/Hamberger/ChosenItem'
 export default {
     name: 'hamberger',
     components: {
         Form,
-        ChosenItem
     }
 }
 </script>
