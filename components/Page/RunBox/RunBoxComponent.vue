@@ -1,14 +1,15 @@
 <template>
-  <div class="grid grid-cols-4 gap-4 h-64 p-6">
+  <div class="grid grid-cols-4 gap-4 h-fit p-6">
     <div
       v-for="(item, key) in items"
       :key="key"
       :class="
-        'border text-white text-2xl flex justify-center items-center cursor-pointer ' +
-        (count == key + 1 ? 'bg-slate-400' : item)
+        'h-36 border text-white text-2xl flex justify-center items-center cursor-pointer ' +
+        (count == key + 1 ? 'bg-slate-400 border-4 border-lime-500' : item.color)
       "
     >
-      {{ key + 1 }}
+      <p class="absolute text-white">{{ item.text }}</p>
+      <img class="w-full h-full" :src="item.src" alt="" />
     </div>
     <div>
       <button
