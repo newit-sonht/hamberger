@@ -1,8 +1,8 @@
 # hamberger
 
-## Watch tailwin
-
-npx tailwindcss -i ./assets/css/main.css -o ./dist/output.css --watch
+## Start
+npm run css
+npm run dev
 
 ## Build Setup
 
