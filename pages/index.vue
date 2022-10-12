@@ -25,8 +25,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             swipeToSlide: true,
-            arrows: true,
-            lazyLoad: true,
+            arrows: true
           }"
         ></Carousel>
       </div>
