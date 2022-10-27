@@ -1,12 +1,12 @@
 <template>
   <div class="bg-slate-500">
     <div class="min-w-[1000px] max-w-[1200px]">
-    <RunBoxComponent
-      :items="items"
-      :count="count"
-      :running="running"
-      :runBox="runBox"
-    />
+      <RunBoxComponent
+        :items="items"
+        :count="count"
+        :running="running"
+        :runBox="runBox"
+      />
     </div>
   </div>
 </template>

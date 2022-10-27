@@ -13,21 +13,6 @@
     </nav>
     <div class="bg-black">
       <div class="px-24">
-        <Carousel
-          :items="items"
-          :settings="{
-            autoplay: true,
-            dots: false,
-            infinite: true,
-            rows: 1,
-            initialSlide: 1,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            swipeToSlide: true,
-            arrows: true
-          }"
-        ></Carousel>
       </div>
     </div>
   </div>
